@@ -15,3 +15,10 @@ print(type(this_is_boolean))
 print(type(this_is_nonetype))
 # type:자료형을 반환하는 함수
 
+str_123 = "123"
+n_123 = int(str_123)
+print(str_123)
+print(n_123)
+# 여기까지 print된 두 값의 차이는 없음
+print(type(str_123)) #<class 'str'>
+print(type(n_123)) #<class 'int'>
