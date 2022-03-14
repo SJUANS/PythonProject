@@ -23,7 +23,8 @@ Butler = {
     "Name" : "PawPaw",
     "Cat" : True,
     "Cat age" : 5,
-    "Job" : ["feed","clean toilet","play","give medicine"]
+    "Job" : ["feed","clean toilet","play","give medicine"],
+    "Tuple" : (1,2,3),
 } # Key를 쓸 때 따옴표를 꼭 써줄 것!
 print(type(Butler))
 print(Butler["Cat age"]) #5
