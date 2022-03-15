@@ -1,4 +1,3 @@
-
 this_is_string = "문자열"
 this_is_int = 3
 this_is_float = 3.14
