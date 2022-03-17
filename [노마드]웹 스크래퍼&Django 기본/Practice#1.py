@@ -1,10 +1,11 @@
 # Make a calculator : plus, minus, times, division, negation, power
 
 def validation(a):
-    if type(a) is int:
+    if type(a) is int: #integer 타입 나타내므로 string으로 쓰지 않음
         return a
     else:
         print("Please write all the arguments as integers")
+        return None
 
 def plus(a,b):
    a = validation(a)
