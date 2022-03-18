@@ -30,11 +30,18 @@ def is_it_down():
   url = input("Please write a URL or URLs you want to check. (Seperated by comma)\n")
   URLs = preprocess_url(url)
   for URL in URLs:
-    URL_status = requests.get(URL).status_code
-    if URL_status == 200:
-      print(f"{URL} is up!")
-    else:
-      print(f"{URL} is down!")
+    try:
+      URL_status = requests.get(URL).status_code
+      if URL_status == 200:
+        print(f"{URL} is up!")
+      else:
+        print(f"{URL} is down!")
+    except:
+      valid_url = "." in URL
+      if valid_url is False:
+        print(f"{url} is not a valid url")
+      else:
+        print(f"{URL} is down!")
   restart_Y_N()
 
 is_it_down()
