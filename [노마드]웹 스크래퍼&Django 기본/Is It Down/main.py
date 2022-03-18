@@ -43,8 +43,6 @@ def is_it_down():
       isHTTP = "http://" in URL
       if valid_url_dot is False and isHTTP is True:
         print(f"{URL.strip('http://')} is not a valid url")
-      elif isHTTP is False:
-        print(f"{URL} is not a valid url")
       elif valid_url_dot is False:
         print(f"{URL.strip('http://''https://')} is not a valid url")
       elif valid_url_slash or valid_url_colon is False:
