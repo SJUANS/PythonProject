@@ -49,6 +49,7 @@ def is_it_down():
         print(f"{URL} is not a valid url")
       else:
         print(f"{URL} is down!")
+      #strip 함수가 문자를 단어 단위가 아니라 알파벳 단위로 지우고 있다!! 깔끔하게 처리할 방법을 나중에 찾아보자
   restart_Y_N()
 
 is_it_down()
