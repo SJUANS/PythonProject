@@ -8,7 +8,6 @@ def restart_Y_N():
       is_it_down()
   elif YN.lower() == "n":
     print("k. bye!")
-    return
   else:
     print("That's not a valid answer")
     restart_Y_N()
