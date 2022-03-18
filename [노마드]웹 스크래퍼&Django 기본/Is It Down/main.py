@@ -37,9 +37,13 @@ def is_it_down():
       else:
         print(f"{URL} is down!")
     except:
-      valid_url = "." in URL
-      if valid_url is False:
+      valid_url_dot = "." in URL
+      valid_url_slash = "/" in URL
+      valid_url_colon = ":" in URL
+      if valid_url_dot is False:
         print(f"{URL.strip('http://''https://')} is not a valid url")
+      elif valid_url_slash or valid_url_colon is False:
+        print(f"{URL} is not a valid url")
       else:
         print(f"{URL} is down!")
   restart_Y_N()
