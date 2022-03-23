@@ -18,13 +18,11 @@ def extract_SB_pages():
         companies = (link.find("span", {"class": "company"}).string) #단일 요소에서 문자열 빼낼 때는 string
         links = link.a['href']
         pages.append({"brand":companies, "job_page":links})
+        extract_SB_jobs(links)
         # file = open(f"{companies}.csv", mode="w")
         # 브랜드명에 /들어가면 에러 나는거 디버깅해야 함
-    return pages
 
-def extract_SB_jobs(): #나중에 pages에서 링크 받아와서 인자로 넣어야 함
-    #place,title(지점),time,pay,date
-    url = "https://mmthcoffee.alba.co.kr/" #임시
+def extract_SB_jobs(url):
     brand_result = requests.get(url)
     SB_soup = BeautifulSoup(brand_result.text, "html.parser")
     normal_info = SB_soup.find(id="NormalInfo").find("tbody")
@@ -41,6 +39,6 @@ def extract_SB_jobs(): #나중에 pages에서 링크 받아와서 인자로 넣�
 
         print(places,titles,times,pays,dates)
 
-extract_SB_jobs()
+extract_SB_pages()
 
 
