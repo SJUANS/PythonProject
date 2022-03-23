@@ -18,14 +18,9 @@ def extract_SB_pages():
         companies = (link.find("span", {"class": "company"}).string) #단일 요소에서 문자열 빼낼 때는 string
         links = link.a['href']
         pages.append({"brand":companies, "job_page":links})
-    return pages
-
-def save_as_csv():
-        file = open("메가커피.csv", mode="w")
-        writer = csv.writer(file)
-        writer.writerow(['place, title, time, pay, date'])
-        writer.writerow(extract_SB_jobs())
+        # file = open(f"{companies}.csv", mode="w")
         # 브랜드명에 /들어가면 에러 나는거 디버깅해야 함
+    return pages
 
 def extract_SB_jobs(): #나중에 pages에서 링크 받아와서 인자로 넣어야 함
     #place,title(지점),time,pay,date
@@ -44,8 +39,8 @@ def extract_SB_jobs(): #나중에 pages에서 링크 받아와서 인자로 넣�
         pays = f'"{pay_text}"'
         dates = (tr.find("td", {"class":"regDate last"})).get_text()
 
-        return (places,titles,times,pays,dates)
+        print(places,titles,times,pays,dates)
 
-save_as_csv()
+extract_SB_jobs()
 
 
