@@ -1,7 +1,12 @@
+import os
+import csv
 from bs4 import BeautifulSoup
 import requests
 
-main_result = requests.get("http://www.alba.co.kr/")
+os.system("clear")
+alba_url = "http://www.alba.co.kr"
+
+main_result = requests.get(alba_url)
 soup = BeautifulSoup(main_result.text, "html.parser")
 main_super_brand = soup.find(id="MainSuperBrand")
 super_brands = main_super_brand.find("ul", {"class": "goodsBox"})
