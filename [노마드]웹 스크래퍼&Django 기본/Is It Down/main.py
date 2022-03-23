@@ -14,7 +14,7 @@ def restart_Y_N():
 
 def preprocess_url(input=""):
   input = input.lower()
-  input = input.replace(' ','') #.strip()안먹히는데??
+  input = input.strip()
   URLs = input.split(',') #,를 구분으로 쪼갠 리스트 생성
   HTTP = "http://"
   for URL in URLs: #주의) 여기서 URL은 URLs의 아이템을 **복사한 값**을 전달한 것 뿐!!
@@ -42,14 +42,11 @@ def is_it_down():
       valid_url_colon = ":" in URL
       isHTTP = "http://" in URL
       if valid_url_dot is False and isHTTP is True:
-        print(f"{URL.strip('http://')} is not a valid url")
-      elif isHTTP is False:
-        print(f"{URL.strip('https://')} is not a valid url")
+        print(f"{URL.replace('http://','')} is not a valid url")
       elif valid_url_dot or valid_url_slash or valid_url_colon is False:
         print(f"{URL} is not a valid url")
       else:
         print(f"{URL} is down!")
-      #strip 함수가 문자를 단어 단위가 아니라 알파벳 단위로 지우고 있다!! 깔끔하게 처리할 방법을 나중에 찾아보자
   restart_Y_N()
 
 is_it_down()
