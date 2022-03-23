@@ -12,7 +12,7 @@ def extract_SB_pages():
     for link in super_brand_jobs[:-1]:
         companies = (link.find("span", {"class": "company"}).string)
         links = link.a['href']
-        pages.append({"brand":companies, "job_link":links})
+        pages.append({"brand":companies, "job_page":links})
     print(pages)
 
 extract_SB_pages()
