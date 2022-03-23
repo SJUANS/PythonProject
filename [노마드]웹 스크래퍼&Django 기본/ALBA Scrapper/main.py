@@ -15,12 +15,37 @@ super_brand_jobs = super_brands.find_all('li')
 def extract_SB_pages():
     pages = []
     for link in super_brand_jobs[:-1]:
-        companies = (link.find("span", {"class": "company"}).string)
+        companies = (link.find("span", {"class": "company"}).string) #단일 요소에서 문자열 빼낼 때는 string
         links = link.a['href']
         pages.append({"brand":companies, "job_page":links})
-    print(pages)
+    return pages
 
-extract_SB_pages()
+def save_as_csv():
+        file = open("메가커피.csv", mode="w")
+        writer = csv.writer(file)
+        writer.writerow(['place, title, time, pay, date'])
+        writer.writerow(extract_SB_jobs())
+        # 브랜드명에 /들어가면 에러 나는거 디버깅해야 함
 
+def extract_SB_jobs(): #나중에 pages에서 링크 받아와서 인자로 넣어야 함
+    #place,title(지점),time,pay,date
+    url = "https://mmthcoffee.alba.co.kr/" #임시
+    brand_result = requests.get(url)
+    SB_soup = BeautifulSoup(brand_result.text, "html.parser")
+    normal_info = SB_soup.find(id="NormalInfo").find("tbody")
+    rows = normal_info.find_all("tr", {"class":""})
+
+    for tr in rows:
+        normal_infos = []
+        places = (tr.find("td", {"class": "local first"})).get_text() #여러 요소에서 문자열 빼낼 때는 get_text()
+        titles = (tr.find("span", {"class":"company"})).get_text()
+        times = (tr.find("td", {"class":"data"})).get_text()
+        pay_text = (tr.find("td", {"class":"pay"})).get_text()
+        pays = f'"{pay_text}"'
+        dates = (tr.find("td", {"class":"regDate last"})).get_text()
+
+        return (places,titles,times,pays,dates)
+
+save_as_csv()
 
 
