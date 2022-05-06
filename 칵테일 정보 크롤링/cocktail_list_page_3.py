@@ -11,8 +11,7 @@ for anchor in anchors[1:]: #칵테일별 상세페이지로 연결되지 않는 
     hrefs = f"https://www.diffordsguide.com{anchor['href']}"
     links.append(hrefs)
 
-# for link in links:
-#     extract_cocktail_collection(link)
-
+for link in links:
+    extract_cocktail_collection(link)
 
 
