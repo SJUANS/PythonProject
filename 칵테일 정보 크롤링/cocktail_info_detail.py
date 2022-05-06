@@ -1,4 +1,5 @@
 import json
+import re #파이썬 정규표현식 라이브러리
 from bs4 import BeautifulSoup
 import requests
 
@@ -15,11 +16,15 @@ dict_result = json.loads(string_cocktail_info) #문자열화한 결과를 다시
 Name = dict_result['name']
 #이미지url o
 Img = dict_result['image']
-#부재료(=가니쉬)
+#부재료(=가니쉬) o
 Garnish = soup.select("#sticky-anchor > div > div > div.cell.auto.divide-right-large > div > article > div > div:nth-child(2) > p")
 Garnish = Garnish[0].text
 #맛
-#상세도수
+#상세도수 o
+Alc_by_vol = soup.select("#sticky-anchor > div > div > div.cell.auto.divide-right-large > div > article > div > div:nth-child(14) > ul > li:nth-child(2)")
+AbV = Alc_by_vol[0].text
+Floats_in_AbV = re.findall("\d+.\d+",AbV) #정규표현식으로 AbV라는 문자열 안에 있는 숫자 두개 추출
+AbV = Floats_in_AbV[0]
 #레시피 재료 o
 Ingredients = dict_result['recipeIngredient']
 #레시피 o
