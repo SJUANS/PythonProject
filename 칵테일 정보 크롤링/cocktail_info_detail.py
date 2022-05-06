@@ -27,8 +27,11 @@ def extract_cocktail_collection(url):
             paragraphs.append(p)
     Garnish = paragraphs[0].text
     # 맛
-    Flavor_chart = soup.find("div", {"class": "grid-x align-justify"}).find("img")
-    Flavor = Flavor_chart["alt"]
+    try:
+        Flavor_chart = soup.find("div", {"class": "grid-x align-justify"}).find("img")
+        Flavor = Flavor_chart["alt"]
+    except:
+        Flavor = "Undefined" #flavor 척도 없는 경우의 예외 처리
     # 상세도수
     Alcohol_content = soup.find("ul", {"class": "no-margin-bottom"}).find_all("li")
     AbV = Alcohol_content[1].get_text()
@@ -64,6 +67,4 @@ def extract_cocktail_collection(url):
         "레시피" : Recipe
     }
     print(cocktail_data)
-
-
 
