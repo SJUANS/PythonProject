@@ -19,15 +19,19 @@ def extract_cocktail_collection(url):
     # 이미지url
     Img = dict_result['image']
     # 부재료(=가니쉬)
-    Garnish = soup.select_one(
-        "#sticky-anchor > div > div > div.cell.auto.divide-right-large > div > article > div > div:nth-child(2) > p").text
+    cells = soup.find_all("div", {"class": "cell"})
+    paragraphs = []
+    for cell in cells:
+        p = cell.find("p", {"class":""})
+        if p is not None:
+            paragraphs.append(p)
+    Garnish = paragraphs[0].text
     # 맛
-    Flavor = soup.select_one(
-        "#sticky-anchor > div > div > div.cell.auto.divide-right-large > div > article > div > div:nth-child(10) > div > div:nth-child(2) > div > div > div:nth-child(3) > img")
-    Flavor_level = Flavor["alt"]
+    Flavor_chart = soup.find("div", {"class": "grid-x align-justify"}).find("img")
+    Flavor = Flavor_chart["alt"]
     # 상세도수
-    AbV = soup.select_one(
-        "#sticky-anchor > div > div > div.cell.auto.divide-right-large > div > article > div > div:nth-child(14) > ul > li:nth-child(2)").text
+    Alcohol_content = soup.find("ul", {"class": "no-margin-bottom"}).find_all("li")
+    AbV = Alcohol_content[1].get_text()
     Floats_in_AbV = re.findall("\d+.\d+", AbV)  # 정규표현식으로 AbV라는 문자열 안에 있는 숫자 추출
     Alc_by_vol = float(Floats_in_AbV[0])  # 추출한 숫자의 자료형: 문자열>실수 로 변환
     # 도수(범주형)
@@ -53,7 +57,7 @@ def extract_cocktail_collection(url):
         "이름" : Name,
         "썸네일" : Img,
         "부재료" : Garnish,
-        "맛" : Flavor_level,
+        "맛" : Flavor,
         "도수" : AbV_level,
         "상세 도수" : Alc_by_vol,
         "재료" : Ingredients,
