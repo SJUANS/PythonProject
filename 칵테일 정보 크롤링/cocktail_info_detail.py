@@ -4,8 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 
 def extract_cocktail_collection(url):
-    cocktail_detail = url
-    page_detail = requests.get(cocktail_detail)
+    page_detail = requests.get(url)
     soup = BeautifulSoup(page_detail.text, "html.parser")
 
     # 크롤링으로 수집 가능 정보↓
@@ -66,5 +65,6 @@ def extract_cocktail_collection(url):
         "재료" : Ingredients,
         "레시피" : Recipe
     }
-    print(cocktail_data)
-
+    with open(f'page_3_{Name}.json', 'w', encoding="utf-8") as f:
+        json.dump(cocktail_data, f, indent="\t", ensure_ascii=False)
+    print(f"...Information of {Name} was collected")
