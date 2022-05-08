@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 from cocktail_info_detail import extract_cocktail_collection
 
-page_3 = "https://www.diffordsguide.com/cocktails/search?include%5Bdg%5D=1&limit=20&sort=rating&offset=40"
+page_3 = "https://www.diffordsguide.com/cocktails/search?include%5Bdg%5D=1&limit=20&sort=rating&offset=140"
 soup = BeautifulSoup(requests.get(page_3).text, "html.parser")
 grid = soup.find("div", {"class": "grid-x grid-margin-x grid-margin-y landing-page-grid"})
 anchors = grid.find_all("a")
