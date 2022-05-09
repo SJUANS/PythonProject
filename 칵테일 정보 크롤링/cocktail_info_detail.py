@@ -20,23 +20,36 @@ def extract_cocktail_collection(url):
     # 레시피 재료
     Ingredients = dict_result['recipeIngredient']
     # 주재료
-    ingredient_name = Ingredients[0].lower()
+    ingredient_base = Ingredients[0].lower()
+    ingredients_info = []
+    for ingredient in Ingredients:
+        ingredient_numbers = re.findall("\d*\.?\d+", ingredient) #정수,소수 모두 포함 실수 추출 정규표현식
+        ingredient_amount = ingredient_numbers[0]
+        if ingredient.find("ml") != -1:
+            ingredient_strings = ingredient.split("ml")
+            ingredient_name = ingredient_strings[1]
+            ingredient_amount = f"{ingredient_amount} ml"
+        else:
+            ingredient_name = re.sub(r'[0-9]+', '', ingredient) #문자열에서 숫자 모두 제거
+            ingredient_amount = ingredient_amount.rstrip()
+        ingredients_info.append(ingredient_amount)
+        ingredients_info.append(ingredient_name.lstrip())
     try:
-        if ingredient_name.find("whisky") != -1:
+        if ingredient_base.find("whisky") != -1:
             Base = "Whisky"
-        elif ingredient_name.find("brandy") != -1:
+        elif ingredient_base.find("brandy") != -1:
             Base = "Brandy"
-        elif ingredient_name.find("gin") != -1:
+        elif ingredient_base.find("gin") != -1:
             Base = "Gin"
-        elif ingredient_name.find("rum") != -1:
+        elif ingredient_base.find("rum") != -1:
             Base = "Rum"
-        elif ingredient_name.find("tequila") != -1:
+        elif ingredient_base.find("tequila") != -1:
             Base = "Tequila"
-        elif ingredient_name.find("vodka") != -1:
+        elif ingredient_base.find("vodka") != -1:
             Base = "Vodka"
-        elif ingredient_name.find("vermouth") != -1:
+        elif ingredient_base.find("vermouth") != -1:
             Base = "Vermouth"
-        elif ingredient_name.find("sherry") != -1:
+        elif ingredient_base.find("sherry") != -1:
             Base = "Sherry"
         else:
             Base = "Etc."
@@ -87,7 +100,7 @@ def extract_cocktail_collection(url):
         "flavor" : Flavor,
         "abv": Alc_by_vol,
         "abv_lv" : AbV_level,
-        "ingredients" : Ingredients,
+        "ingredients" : ingredients_info,
         "recipe" : Recipe,
         "tag" : {
             "기분별": ["태그가 아직 입력되지 않았습니다","태그가 아직 입력되지 않았습니다"],
