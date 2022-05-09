@@ -17,15 +17,12 @@ def extract_cocktail_collection(url):
     Name = dict_result['name']
     # 이미지url
     Img = dict_result['image']
+    # 레시피 재료
+    Ingredients = dict_result['recipeIngredient']
     # 주재료
-    td_list = soup.find_all("td", {"class": "td-align-top"})
-    td_as = []
-    for td in td_list:
-        td_a = td.find("a", {"class": "sp-link"})
-        td_as.append(td_a)
-    ingredient_name = td_as[1].get_text(strip=True)
+    ingredient_name = Ingredients[0].lower()
     try:
-        if ingredient_name.find("whiskey") != -1:
+        if ingredient_name.find("whisky") != -1:
             Base = "Whisky"
         elif ingredient_name.find("brandy") != -1:
             Base = "Brandy"
@@ -74,8 +71,6 @@ def extract_cocktail_collection(url):
         AbV_level = 5
     elif Alc_by_vol >= 51:
         AbV_level = 6
-    # 레시피 재료
-    Ingredients = dict_result['recipeIngredient']
     # 레시피
     Recipe = dict_result['recipeInstructions'][0]['text']
 
