@@ -34,6 +34,10 @@ def extract_cocktail_collection(url):
             Base = "Tequila"
         elif ingredient_name.find("vodka") != -1:
             Base = "Vodka"
+        elif ingredient_name.find("vermouth") != -1:
+            Base = "Vermouth"
+        elif ingredient_name.find("sherry") != -1:
+            Base = "Sherry"
         else:
             Base = "Etc."
     except Exception as e:
