@@ -17,6 +17,30 @@ def extract_cocktail_collection(url):
     Name = dict_result['name']
     # 이미지url
     Img = dict_result['image']
+    # 주재료
+    td_list = soup.find_all("td", {"class": "td-align-top"})
+    td_as = []
+    for td in td_list:
+        td_a = td.find("a", {"class": "sp-link"})
+        td_as.append(td_a)
+    ingredient_name = td_as[1].get_text(strip=True)
+    try:
+        if ingredient_name.find("whiskey") != -1:
+            Base = "Whisky"
+        elif ingredient_name.find("brandy") != -1:
+            Base = "Brandy"
+        elif ingredient_name.find("gin") != -1:
+            Base = "Gin"
+        elif ingredient_name.find("rum") != -1:
+            Base = "Rum"
+        elif ingredient_name.find("tequila") != -1:
+            Base = "Tequila"
+        elif ingredient_name.find("vodka") != -1:
+            Base = "Vodka"
+        else:
+            Base = "Etc."
+    except Exception as e:
+        Base = "Etc."
     # 부재료(=가니쉬)
     cells = soup.find_all("div", {"class": "cell"})
     paragraphs = []
@@ -28,7 +52,7 @@ def extract_cocktail_collection(url):
     # 맛
     try:
         Flavor_chart = soup.find("div", {"class": "grid-x align-justify"}).find("img")
-        Flavor = Flavor_chart["alt"]
+        Flavor = int(Flavor_chart["alt"])
     except:
         Flavor = "Undefined" #flavor 척도 없는 경우의 예외 처리
     # 상세도수
@@ -39,32 +63,37 @@ def extract_cocktail_collection(url):
     # 도수(범주형)
     AbV_level = "Undefined"
     if Alc_by_vol <= 10:
-        AbV_level = "1"
+        AbV_level = 1
     elif Alc_by_vol <= 20:
-        AbV_level = "2"
+        AbV_level = 2
     elif Alc_by_vol <= 30:
-        AbV_level = "3"
+        AbV_level = 3
     elif Alc_by_vol <= 40:
-        AbV_level = "4"
+        AbV_level = 4
     elif Alc_by_vol <= 50:
-        AbV_level = "5"
+        AbV_level = 5
     elif Alc_by_vol >= 51:
-        AbV_level = "6"
+        AbV_level = 6
     # 레시피 재료
     Ingredients = dict_result['recipeIngredient']
     # 레시피
     Recipe = dict_result['recipeInstructions'][0]['text']
 
     cocktail_data = {
-        "이름" : Name,
-        "썸네일" : Img,
-        "부재료" : Garnish,
-        "맛" : Flavor,
-        "도수" : AbV_level,
-        "상세 도수" : Alc_by_vol,
-        "재료" : Ingredients,
-        "레시피" : Recipe
+        "name" : Name,
+        "name_kor" : "직접 작성 필요",
+        "img" : Img,
+        "base" : Base,
+        "garnish" : Garnish,
+        "flavor" : Flavor,
+        "abv": Alc_by_vol,
+        "abv_lv" : AbV_level,
+        "ingredients" : Ingredients,
+        "recipe" : Recipe,
+        "tag" : {
+            "기분별": ["태그가 아직 입력되지 않았습니다","태그가 아직 입력되지 않았습니다"],
+            "인원별": ["태그가 아직 입력되지 않았습니다","태그가 아직 입력되지 않았습니다"],
+            "상황별": ["태그가 아직 입력되지 않았습니다","태그가 아직 입력되지 않았습니다"]
+        }
     }
-    with open(f'page_3_{Name}.json', 'w', encoding="utf-8") as f:
-        json.dump(cocktail_data, f, indent="\t", ensure_ascii=False)
-    print(f"...Information of {Name} was collected")
+    return cocktail_data

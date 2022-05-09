@@ -1,7 +1,7 @@
 import json
 from bs4 import BeautifulSoup
 import requests
-from 크롤링_3페이지_상세페이지 import extract_cocktail_collection
+from cocktail_info_detail import extract_cocktail_collection
 
 page_3 = "https://www.diffordsguide.com/cocktails/search?include%5Bdg%5D=1&limit=20&sort=rating&offset=40"
 soup = BeautifulSoup(requests.get(page_3).text, "html.parser")
