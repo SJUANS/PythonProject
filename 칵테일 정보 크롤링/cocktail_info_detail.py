@@ -65,8 +65,9 @@ def extract_cocktail_collection(url):
     Garnish = paragraphs[0].text
     # 맛
     try:
-        Flavor_chart = soup.find("div", {"class": "grid-x align-justify"}).find("img")
-        Flavor = int(Flavor_chart["alt"])
+        range_div = soup.findAll("div", {"class": "svg-range"})
+        Flavor_div = range_div[1]
+        Flavor = int(Flavor_div.find("img")["alt"])
     except:
         Flavor = "Undefined" #flavor 척도 없는 경우의 예외 처리
     # 상세도수
