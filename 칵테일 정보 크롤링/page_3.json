@@ -133,7 +133,7 @@
 	},
 	{
 		"name": "Aged Grappa Espresso Martini",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "숙성 그라파 에스프레소 마티니",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2021/10/616948ea71392.jpg",
 		"base": "Etc.",
 		"garnish": "Float 3 coffee beans",
@@ -149,28 +149,19 @@
 			"Coffee liqueur",
 			"5 ml",
 			"Muscovado sugar syrup (2 sugar to 1 water)",
-			"2",
+			"2 drop",
 			"Saline solution"
 		],
 		"recipe": "SHAKE all ingredients with ice and strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인"],
+			"상황별": ["친구와", "비오는 날"]
 		}
 	},
 	{
 		"name": "Aged Honey Daiquiri",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "숙성 허니 다이키리",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af2fafe0be02.jpg",
 		"base": "Rum",
 		"garnish": "Lime wedge on rim",
@@ -189,23 +180,14 @@
 		],
 		"recipe": "SHAKE all ingredients with ice and fine strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["2인"],
+			"상황별": ["데이트", "크리스마스", "발렌타인/화이트데이"]
 		}
 	},
 	{
 		"name": "Aged Rum Fruit Cup (Difford's Cup No.14)",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "숙성 럼 프루트 컵 (Difford's Cup No.14)",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af301a14b18f.jpg",
 		"base": "Rum",
 		"garnish": "Lemon, orange & strawberry slices, mint sprig & borage",
@@ -219,7 +201,7 @@
 			"Orange Curaçao liqueur",
 			"25 ml",
 			"Vermouth - Rosso/rouge (sweet) vermouth",
-			"2",
+			"2 dash",
 			"Angostura or other aromatic bitters",
 			"50 ml",
 			"Ginger ale",
@@ -228,23 +210,14 @@
 		],
 		"recipe": "POUR all ingredients into glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인", "3인 이상"],
+			"상황별": ["친구와", "오늘밤 주인공은 나", "여름휴가"]
 		}
 	},
 	{
 		"name": "Air Mail",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "에어 메일",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2020/02/5e3d5c1c8e350.jpg",
 		"base": "Rum",
 		"garnish": "Tip of a mint sprig or serve naked",
@@ -263,23 +236,14 @@
 		],
 		"recipe": "SHAKE first 3 ingredients with ice and strain into an ice-filled glass (preferably a column of ice)",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"]
+			"인원별": ["1인", "2인", "3인 이상"],
+			"상황별": ["소개팅", "오늘밤 주인공은 나", "크리스마스"]
 		}
 	},
 	{
 		"name": "Alpine Negroni",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "알파인 네그로니",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2020/07/5f102a88a4af5.jpg",
 		"base": "Gin",
 		"garnish": "Rosemary sprig",
@@ -297,30 +261,21 @@
 			"Génépi liqueur",
 			"5 ml",
 			"Crème de menthe (white)",
-			"3",
+			"3 dash",
 			"Lemon bitters",
-			"1",
+			"1 dash",
 			"Saline solution"
 		],
 		"recipe": "STIR all ingredients with ice and strain into ice-filled glass (preferably over a chunk of block ice)",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["나쁨"],
+			"인원별": ["1인"],
+			"상황별": ["이별", "비오는 날"]
 		}
 	},
 	{
 		"name": "Amatitan Twist",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "아마티탄 트위스트",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af2fb57938c9.jpg",
 		"base": "Tequila",
 		"garnish": "Grapefruit zest twist",
@@ -334,28 +289,19 @@
 			"Maraschino liqueur",
 			"7.5 ml",
 			"Chartreuse Yellow",
-			"2",
+			"2 dash",
 			"Grapefruit bitters"
 		],
 		"recipe": "STIR all ingredients with ice and strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인"],
+			"상황별": ["소개팅", "친구와", "여름휴가"]
 		}
 	},
 	{
 		"name": "Anejo Manhattan",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "아네호 맨하탄",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af2fb7f1d2a3.jpg",
 		"base": "Tequila",
 		"garnish": "Salami wrapped Luxardo Maraschino cherry on a pick",
@@ -367,30 +313,21 @@
 			"Tequila anejo",
 			"25 ml",
 			"Vermouth - Rosso/rouge (sweet) vermouth",
-			"1",
+			"1 dash",
 			"Angostura or other aromatic bitters",
-			"1",
+			"1 dash",
 			"Orange bitters"
 		],
 		"recipe": "STIR all ingredients with ice and strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["2인", "3인 이상"],
+			"상황별": ["친구와", "오늘밤 주인공은 나"]
 		}
 	},
 	{
 		"name": "Añejo Old Fashioned",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "아네호 올드 패션드",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af31521163c4.jpg",
 		"base": "Tequila",
 		"garnish": "Lime or orange zest twist",
@@ -402,28 +339,19 @@
 			"Tequila anejo",
 			"7.5 ml",
 			"Agave syrup",
-			"8",
+			"8 drop",
 			"Margarita bitters"
 		],
 		"recipe": "STIR one shot of tequila with three ice cubes (dry to the touch frozen ice, not wet ice) in a glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["나쁨"],
+			"인원별": ["1인", "2인"],
+			"상황별": ["이별", "비오는 날", "To Go"]
 		}
 	},
 	{
 		"name": "Apple Jack (by Sasha Petraske)",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "애플잭 (by Sasha Petraske)",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2019/06/5d16099f017b7.jpg",
 		"base": "Brandy",
 		"garnish": "None",
@@ -442,23 +370,14 @@
 		],
 		"recipe": "SHAKE all ingredients with ice and fine strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인", "3인 이상"],
+			"상황별": ["소개팅", "친구와", "여름휴가", "To Go"]
 		}
 	},
 	{
 		"name": "Arte de Volar",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "아르테 드 볼라르",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af2fc006cad7.jpg",
 		"base": "Tequila",
 		"garnish": "Lime zest twist",
@@ -481,31 +400,22 @@
 		],
 		"recipe": "SHAKE all ingredients with ice and fine strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인"],
+			"상황별": ["데이트", "소개팅", "비오는 날", "오늘밤 주인공은 나"]
 		}
 	},
 	{
 		"name": "Atholl Brose",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "아톨 브로스",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af2fc08890af.jpg",
-		"base": "Etc.",
+		"base": "Whisky",
 		"garnish": "Dust with grated nutmeg",
 		"flavor": 6,
 		"abv": 17.38,
 		"abv_lv": 2,
 		"ingredients": [
-			"2",
+			"2 spoon",
 			"Honey",
 			"40 ml",
 			"Whisky - Scotch whisky (blended)",
@@ -520,23 +430,14 @@
 		],
 		"recipe": "STIR honey with Scotch in base of shaker until honey dissolves",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인"],
+			"상황별": ["친구와", "크리스마스"]
 		}
 	},
 	{
 		"name": "Avion de Papel",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "아비온 드 파펠",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2021/10/616026e83d5f5.jpg",
 		"base": "Tequila",
 		"garnish": "Lemon zest twist",
@@ -555,23 +456,14 @@
 		],
 		"recipe": "SHAKE all ingredients with ice and fine strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인"],
+			"상황별": ["친구와", "비오는 날", "여름휴가"]
 		}
 	},
 	{
 		"name": "Bacardi Special",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "바카디 스페셜",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af2fc3a782bb.jpg",
 		"base": "Rum",
 		"garnish": "Skewered Luxardo Maraschino cherry",
@@ -594,23 +486,14 @@
 		],
 		"recipe": "SHAKE all ingredients with ice and fine strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인"],
+			"상황별": ["데이트", "소개팅", "오늘밤 주인공은 나", "발렌타인/화이트데이"]
 		}
 	},
 	{
 		"name": "Bamboo Cocktail (Difford's 'Perfect' recipe)",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "뱀부 (Difford's 'Perfect' recipe)",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af2fc5652e22.jpg",
 		"base": "Sherry",
 		"garnish": "Orange zest twist",
@@ -624,28 +507,19 @@
 			"Vermouth - Rosso/rouge (sweet) vermouth",
 			"22.5 ml",
 			"Vermouth - Dry",
-			"1",
+			"1 dash",
 			"Orange bitters"
 		],
 		"recipe": "STIR all ingredients with ice and strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인"],
+			"상황별": ["데이트", "소개팅", "비오는 날", "To Go"]
 		}
 	},
 	{
 		"name": "Bamboo Cocktail (Joaquín Simó's recipe)",
-		"name_kor": "직접 작성 필요",
+		"name_kor": "뱀부 (Joaquín Simó's recipe)",
 		"img": "https://cdn.diffords.com/contrib/stock-images/2018/05/5af2fc59a0a99.jpg",
 		"base": "Sherry",
 		"garnish": "Lemon zest twist",
@@ -659,25 +533,16 @@
 			"Vermouth - Dry",
 			"5 ml",
 			"Sugar syrup (rich) 2 sugar to 1 water",
-			"2",
+			"2 dash",
 			"Angostura or other aromatic bitters",
-			"2",
+			"2 dash",
 			"Orange bitters"
 		],
 		"recipe": "STIR all ingredients with ice and strain into chilled glass",
 		"tag": {
-			"기분별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"인원별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			],
-			"상황별": [
-				"태그가 아직 입력되지 않았습니다",
-				"태그가 아직 입력되지 않았습니다"
-			]
+			"기분별": ["좋음"],
+			"인원별": ["1인", "2인"],
+			"상황별": ["데이트", "비오는 날", "오늘밤 주인공은 나"]
 		}
 	}
 ]
